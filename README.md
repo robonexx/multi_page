@@ -10,3 +10,4 @@ So learned to use the element when directing to the page components instead of "
 
 Re used the fetch hook that was created in an earlier part of this course
 
+Also this part is using the json db server 
