@@ -3,16 +3,17 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Nav from './components/nav'
+import Nav from './components/nav';
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <nav>
+        <header>
           <h1>My Articles</h1>
           <Nav />
-        </nav>
+        </header>
+
         {/* A bit different then the tutorial due to react router is now version 6 */}
         <Routes>
           <Route path='/' element={<Home />} />
