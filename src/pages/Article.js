@@ -3,20 +3,22 @@ import { useFetch } from '../hooks/useFetch';
 import { useEffect } from 'react';
 
 export default function Article() {
+    /* 
+    params.id destructure to {id} */
   const { id } = useParams();
   const url = 'http://localhost:3000/articles/' + id;
-  const { data: article, isPending, error } = useFetch(url);
+  const { data: article, isLoading, error } = useFetch(url);
   const navigate = useNavigate();
 
   useEffect(() => {
     if (error) {
-      setTimeout(() => navigate('/'), 2000);
+      setTimeout(() => navigate('/'), 1000);
     }
   }, [error, navigate]);
 
   return (
     <div>
-      {isPending && <div>Loading...</div>}
+      {isLoading && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {article && (
         <div key={article.id}>

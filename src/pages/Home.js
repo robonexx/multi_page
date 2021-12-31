@@ -5,14 +5,14 @@ import './Home.css';
 export default function Home() {
   const {
     data: articles,
-    isPending,
+    isLoading,
     error,
   } = useFetch('http://localhost:3000/articles');
 
   return (
     <div className='home'>
       <h2>Articles</h2>
-      {isPending && <div>Loading...</div>}
+      {isLoading && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {articles &&
         articles.map((article) => (
