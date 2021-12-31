@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Nav from './components/nav'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <BrowserRouter>
         <nav>
           <h1>My Articles</h1>
+          <Nav />
         </nav>
         {/* A bit different then the tutorial due to react router is now version 6 */}
         <Routes>
